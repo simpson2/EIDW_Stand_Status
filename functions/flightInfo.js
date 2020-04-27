@@ -1,17 +1,4 @@
-const vatsim = "http://eu.data.vatsim.net/vatsim-data.json";
-
-async function getData() {
-    try {
-        const res = await fetch(vatsim);
-        const data = await res.json();
-        
-        console.log(data);
-        return data;
-    }
-    catch(err) {
-        console.log("ERROR: "+err);
-    }
-}
+import { getData } from "./requestVATSIMData.js";
 
 async function getDepartures() {
     const data = await getData();
