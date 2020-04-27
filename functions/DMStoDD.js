@@ -5,5 +5,3 @@ function DMStoDD(degrees, minutes, seconds, hemi) {
     }
     return dd;
 }
-
-module.exports = DMStoDD;
