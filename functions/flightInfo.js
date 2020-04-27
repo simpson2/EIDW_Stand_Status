@@ -20,7 +20,7 @@ async function getDepartures() {
     const table = document.getElementById("departures");
 
     try{
-        for(i = 0; i < clients.length; i++) {
+        for(let i = 0; i < clients.length; i++) {
             let client = clients[i];
 
             let row = document.createElement("tr");
@@ -55,7 +55,7 @@ async function getArrivals() {
     const table = document.getElementById("arrivals");
 
     try{
-        for(i = 0; i < clients.length; i++) {
+        for(let i = 0; i < clients.length; i++) {
             let client = clients[i];
 
             let row = document.createElement("tr");
@@ -82,3 +82,5 @@ async function getArrivals() {
         console.log("ERR: "+err);
     }
 }
+
+export {getDepartures, getArrivals };
