@@ -1,4 +1,4 @@
-const DMStoDD = require("../functions/DMStoDD");
+import { DMStoDD } from "../functions/DMStoDD.js"
 
 const EIDWStandCoords = {
     "101": {
@@ -614,5 +614,3 @@ const EIDWStandCoords = {
         "lon": DMStoDD(006, 15, 37.71, "W")
     },
 }
-
-console.log(EIDWStandCoords["110R"]);

@@ -4,12 +4,13 @@ async function getData() {
     try {
         const res = await fetch(vatsim);
         const data = await res.json();
-
-        //return data;
-
+        
         console.log(data);
+        return data;
     }
     catch(err) {
         console.log("ERROR: "+err);
     }
 }
+
+export { getData };

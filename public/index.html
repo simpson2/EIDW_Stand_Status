@@ -2,10 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <script type="text/javascript" src="../functions/requestVATSIMData.js"></script>
-    <title>Test</title>
+    <script type="text/javascript" src="../functions/flightInfo.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <title>Dublin(EIDW) Information</title>
 </head>
-<body>
-    <button onclick="getData()">Test</button>
+<body onload="getDepartures(); getArrivals()">
+    <table id="stands">
+        <caption>Stands</caption>
+
+        <tr>
+            <th>Stand</th>
+            <th>Status</th>
+        </tr>
+    </table>
+    <table id="departures">
+        <caption>Departures</caption>
+
+        <tr>
+            <th>Flight</th>
+            <th>To</th>
+        </tr>
+    </table>
+    <table id="arrivals">
+        <caption>Arrivals</caption>
+
+        <tr>
+            <th>Flight</th>
+            <th>From</th>
+        </tr>
+    </table>
 </body>
 </html>
