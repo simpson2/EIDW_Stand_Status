@@ -353,6 +353,166 @@ const EIDWStandCoords = {
         "lat": DMStoDD(53, 25, 35.49, "N"),
         "lon": DMStoDD(006, 14, 48.80, "W")
     },
-};
+    "313L": {
+        "lat": DMStoDD(53, 25, 35.07, "N"),
+        "lon": DMStoDD(006, 14, 50.73, "W")
+    },
+    "313C": {
+        "lat": DMStoDD(53, 25, 34.46, "N"),
+        "lon": DMStoDD(006, 14, 48.57, "W")
+    },
+    "313R": {
+        "lat": DMStoDD(53, 25, 34.20, "N"),
+        "lon": DMStoDD(006, 14, 50.02, "W")
+    },
+    "314": {
+        "lat": DMStoDD(53, 25, 32.68, "N"),
+        "lon": DMStoDD(006, 14, 47.57, "W")
+    },
+    "315L": {
+        "lat": DMStoDD(53, 25, 31.18, "N"),
+        "lon": DMStoDD(006, 14, 47.91, "W")
+    },
+    "315C": {
+        "lat": DMStoDD(53, 25, 32.01, "N"),
+        "lon": DMStoDD(006, 14, 46.24, "W")
+    },
+    "315R": {
+        "lat": DMStoDD(53, 25, 30.89, "N"),
+        "lon": DMStoDD(006, 14, 46.44, "W")
+    },
+    "316": {
+        "lat": DMStoDD(53, 25, 32.96, "N"),
+        "lon": DMStoDD(006, 14, 43.04, "W")
+    },
+    "317": {
+        "lat": DMStoDD(53, 25, 32.47, "N"),
+        "lon": DMStoDD(006, 14, 43.44, "W")
+    },
+    "318L": {
+        "lat": DMStoDD(53, 25, 33.39, "N"),
+        "lon": DMStoDD(006, 14, 42.73, "W")
+    },
+    "318C": {
+        "lat": DMStoDD(53, 25, 34.94, "N"),
+        "lon": DMStoDD(006, 14, 41.71, "W")
+    },
+    "318R": {
+        "lat": DMStoDD(53, 25, 34.78, "N"),
+        "lon": DMStoDD(006, 14, 41.55, "W")
+    },
+    "400T": {
+        "lat": DMStoDD(53, 25, 31.79, "N"),
+        "lon": DMStoDD(006, 14, 36.49, "W")
+    },
+    "400L": {
+        "lat": DMStoDD(53, 25, 30.50, "N"),
+        "lon": DMStoDD(006, 14, 32.55, "W")
+    },
+    "400C": {
+        "lat": DMStoDD(53, 25, 29.36, "N"),
+        "lon": DMStoDD(006, 14, 32.87, "W")
+    },
+    "400R": {
+        "lat": DMStoDD(53, 25, 29.21, "N"),
+        "lon": DMStoDD(006, 14, 33.73, "W")
+    },
+    "401L": {
+        "lat": DMStoDD(53, 25, 28.45, "N"),
+        "lon": DMStoDD(006, 14, 35.79, "W")
+    },
+    "401C": {
+        "lat": DMStoDD(53, 25, 27.36, "N"),
+        "lon": DMStoDD(006, 14, 36.24, "W")
+    },
+    "401R": {
+        "lat": DMStoDD(53, 25, 27.23, "N"),
+        "lon": DMStoDD(006, 14, 37.08, "W")
+    },
+    "402L": {
+        "lat": DMStoDD(53, 25, 26.50, "N"),
+        "lon": DMStoDD(006, 14, 39.17, "W")
+    },
+    "402C": {
+        "lat": DMStoDD(53, 25, 25.39, "N"),
+        "lon": DMStoDD(006, 14, 39.56, "W")
+    },
+    "402R": {
+        "lat": DMStoDD(53, 25, 25.26, "N"),
+        "lon": DMStoDD(006, 14, 40.43, "W")
+    },
+    "403L": {
+        "lat": DMStoDD(53, 25, 24.57, "N"),
+        "lon": DMStoDD(006, 14, 42.61, "W")
+    },
+    "403C": {
+        "lat": DMStoDD(53, 25, 23.42, "N"),
+        "lon": DMStoDD(006, 14, 42.91, "W")
+    },
+    "403R": {
+        "lat": DMStoDD(53, 25, 23.28, "N"),
+        "lon": DMStoDD(006, 14, 43.78, "W")
+    },
+    "404L": {
+        "lat": DMStoDD(53, 25, 22.58, "N"),
+        "lon": DMStoDD(006, 14, 45.98, "W")
+    },
+    "404C": {
+        "lat": DMStoDD(53, 25, 21.38, "N"),
+        "lon": DMStoDD(006, 14, 46.55, "W")
+    },
+    "404R": {
+        "lat": DMStoDD(53, 25, 21.28, "N"),
+        "lon": DMStoDD(006, 14, 47.01, "W")
+    },
+    "405T": {
+        "lat": DMStoDD(53, 25, 21.45, "N"),
+        "lon": DMStoDD(006, 14, 39.93, "W")
+    },
+    "406A": {
+        "lat": DMStoDD(53, 25, 21.76, "N"),
+        "lon": DMStoDD(006, 14, 37.23, "W")
+    },
+    "406C": {
+        "lat": DMStoDD(53, 25, 23.12, "N"),
+        "lon": DMStoDD(006, 14, 36.81, "W")
+    },
+    "406B": {
+        "lat": DMStoDD(53, 25, 23.29, "N"),
+        "lon": DMStoDD(006, 14, 36.23, "W")
+    },
+    "407L": {
+        "lat": DMStoDD(53, 25, 23.91, "N"),
+        "lon": DMStoDD(006, 14, 33.82, "W")
+    },
+    "407C": {
+        "lat": DMStoDD(53, 25, 25.10, "N"),
+        "lon": DMStoDD(006, 14, 33.46, "W")
+    },
+    "407R": {
+        "lat": DMStoDD(53, 25, 25.27, "N"),
+        "lon": DMStoDD(006, 14, 32.76, "W")
+    },
+    "408L": {
+        "lat": DMStoDD(53, 25, 25.89, "N"),
+        "lon": DMStoDD(006, 14, 30.47, "W")
+    },
+    "408C": {
+        "lat": DMStoDD(53, 25, 27.07, "N"),
+        "lon": DMStoDD(006, 14, 30.11, "W")
+    },
+    "408R": {
+        "lat": DMStoDD(53, 25, 27.25, "N"),
+        "lon": DMStoDD(006, 14, 29.41, "W")
+    },
+    "409L": {
+        "lat": DMStoDD(53, 25, 27.82, "N"),
+        "lon": DMStoDD(006, 14, 27.06, "W")
+    },
+    "409C": {
+        "lat": DMStoDD(53, 25, 28.94, "N"),
+        "lon": DMStoDD(006, 14, 25.56, "W")
+    },
+}
 
 console.log(EIDWStandCoords["110R"]);
