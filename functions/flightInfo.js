@@ -33,6 +33,7 @@ async function getDepartures() {
     catch(err) {
         console.log("ERR: "+err);
     }
+    console.log("-------------");
 }
 
 async function getArrivals() {
