@@ -25,3 +25,13 @@ th {
     background-color: #2f4050;
     color: white;
 }
+
+.focus {
+    background-color: #1bb394;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.pageNumber {
+    margin: 2px;
+}

@@ -3,6 +3,7 @@ import {
 } from "./requestVATSIMData.js";
 
 async function getDepartures() {
+
     const data = await getData();
     const clients = data.clients;
 
@@ -34,6 +35,20 @@ async function getDepartures() {
         }
     } catch (err) {
         console.log("ERR: " + err);
+    }
+    for (let i = 0; i < 12; i++) {
+
+        let row = document.createElement("tr");
+        let callsignCell = document.createElement("td");
+        // callsignCell.style.textAlign = "left";
+        let destCell = document.createElement("td");
+
+        callsignCell.innerHTML = "test";
+        destCell.innerHTML = "test";
+
+        row.appendChild(callsignCell);
+        row.appendChild(destCell);
+        table.appendChild(row);
     }
 }
 
@@ -71,8 +86,21 @@ async function getArrivals() {
     } catch (err) {
         console.log("ERR: " + err);
     }
-}
+    for (let i = 0; i < 12; i++) {
 
+        let row = document.createElement("tr");
+        let callsignCell = document.createElement("td");
+        // callsignCell.style.textAlign = "left";
+        let depCell = document.createElement("td");
+
+        callsignCell.innerHTML = "test";
+        depCell.innerHTML = "test";
+
+        row.appendChild(callsignCell);
+        row.appendChild(depCell);
+        table.appendChild(row);
+    }
+}
 export {
     getDepartures,
     getArrivals
