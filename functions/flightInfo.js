@@ -14,6 +14,7 @@ async function getDepartures() {
 
             let row = document.createElement("tr");
             let callsignCell = document.createElement("td");
+            // callsignCell.style.textAlign = "left";
             let destCell = document.createElement("td");
 
             if (client.planned_depairport === "EIDW") {
@@ -49,6 +50,7 @@ async function getArrivals() {
 
             let row = document.createElement("tr");
             let callsignCell = document.createElement("td");
+            // callsignCell.style.textAlign = "left";
             let depCell = document.createElement("td");
 
             if (client.planned_destairport === "EIDW") {
