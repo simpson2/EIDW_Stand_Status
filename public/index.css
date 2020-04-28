@@ -1,12 +1,12 @@
 caption {
-    font-size: 22px;
+    font-size: 1.4rem;
     font-family: monospace;
     text-align: center;
     /* color: black; */
 }
 
 table {
-    font-size: 22px;
+    font-size: 1.8rem;
     font-family: monospace;
     border-collapse: collapse;
     margin: 0 auto;
@@ -14,13 +14,17 @@ table {
     /* color: white; */
 }
 
-tr,
-th {
-    padding-left: 15px;
-    padding-right: 15px;
+th,
+td {
+    padding: 0.35rem;
 }
 
 tr {
-    border: 1px solid orange;
+    border: 1px solid #1bb394;
     text-align: center;
+}
+
+th {
+    background-color: #2f4050;
+    color: white;
 }
