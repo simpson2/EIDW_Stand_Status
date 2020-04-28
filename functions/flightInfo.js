@@ -1,4 +1,6 @@
-import { getData } from "./requestVATSIMData.js";
+import {
+    getData
+} from "./requestVATSIMData.js";
 
 async function getDepartures() {
     const data = await getData();
@@ -6,20 +8,20 @@ async function getDepartures() {
 
     const table = document.getElementById("departures");
 
-    try{
-        for(let i = 0; i < clients.length; i++) {
+    try {
+        for (let i = 0; i < clients.length; i++) {
             let client = clients[i];
 
             let row = document.createElement("tr");
             let callsignCell = document.createElement("td");
             let destCell = document.createElement("td");
 
-            if(client.planned_depairport === "EIDW") {
-                
+            if (client.planned_depairport === "EIDW") {
+
                 let callsign = client.callsign;
                 let dest = client.planned_destairport;
 
-                console.log("C/S: "+callsign+" | DEST: "+dest)
+                console.log("C/S: " + callsign + " | DEST: " + dest)
 
                 callsignCell.innerHTML = callsign;
                 destCell.innerHTML = dest;
@@ -29,9 +31,8 @@ async function getDepartures() {
                 table.appendChild(row);
             }
         }
-    }
-    catch(err) {
-        console.log("ERR: "+err);
+    } catch (err) {
+        console.log("ERR: " + err);
     }
 }
 
@@ -42,20 +43,20 @@ async function getArrivals() {
 
     const table = document.getElementById("arrivals");
 
-    try{
-        for(let i = 0; i < clients.length; i++) {
+    try {
+        for (let i = 0; i < clients.length; i++) {
             let client = clients[i];
 
             let row = document.createElement("tr");
             let callsignCell = document.createElement("td");
             let depCell = document.createElement("td");
 
-            if(client.planned_destairport === "EIDW") {
-                
+            if (client.planned_destairport === "EIDW") {
+
                 let callsign = client.callsign;
                 let dep = client.planned_depairport;
 
-                console.log("C/S: "+callsign+" | DEP: "+dep)
+                console.log("C/S: " + callsign + " | DEP: " + dep)
 
                 callsignCell.innerHTML = callsign;
                 depCell.innerHTML = dep;
@@ -65,10 +66,12 @@ async function getArrivals() {
                 table.appendChild(row);
             }
         }
-    }
-    catch(err) {
-        console.log("ERR: "+err);
+    } catch (err) {
+        console.log("ERR: " + err);
     }
 }
 
-export {getDepartures, getArrivals };
+export {
+    getDepartures,
+    getArrivals
+};
