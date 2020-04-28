@@ -2,7 +2,6 @@ caption {
     font-size: 1.4rem;
     font-family: monospace;
     text-align: center;
-    /* color: black; */
 }
 
 table {
@@ -10,8 +9,6 @@ table {
     font-family: monospace;
     border-collapse: collapse;
     margin: 2rem auto;
-    /* background-color: green; */
-    /* color: white; */
 }
 
 th,
