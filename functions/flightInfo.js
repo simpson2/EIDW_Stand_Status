@@ -9,6 +9,9 @@ async function getDepartures() {
 
     const table = document.getElementById("departures_entries");
 
+    let c = 0;
+    const depCaption = document.getElementById("depCaption");
+
     try {
         for (let i = 0; i < clients.length; i++) {
             let client = clients[i];
@@ -20,6 +23,8 @@ async function getDepartures() {
 
             if (client.planned_depairport === "EIDW") {
 
+                c+=1;
+
                 let callsign = client.callsign;
                 let dest = client.planned_destairport;
 
@@ -27,6 +32,8 @@ async function getDepartures() {
 
                 callsignCell.innerHTML = callsign;
                 destCell.innerHTML = dest;
+
+                depCaption.innerHTML = c+" Departures";
 
                 row.appendChild(callsignCell);
                 row.appendChild(destCell);
@@ -45,6 +52,9 @@ async function getArrivals() {
 
     const table = document.getElementById("arrivals_entries");
 
+    let c = 0;
+    const arrCaption = document.getElementById("arrCaption");
+
     try {
         for (let i = 0; i < clients.length; i++) {
             let client = clients[i];
@@ -56,6 +66,8 @@ async function getArrivals() {
 
             if (client.planned_destairport === "EIDW") {
 
+                c+=1;
+
                 let callsign = client.callsign;
                 let dep = client.planned_depairport;
 
@@ -63,6 +75,8 @@ async function getArrivals() {
 
                 callsignCell.innerHTML = callsign;
                 depCell.innerHTML = dep;
+
+                arrCaption.innerHTML = c+" Arrivals";
 
                 row.appendChild(callsignCell);
                 row.appendChild(depCell);
