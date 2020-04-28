@@ -8,12 +8,11 @@ window.onload = () => {
         const totalRows = $("#departures").find("tbody tr:has(td)").length;
         const perPage = 5;
         const totalPages = Math.ceil(totalRows/perPage);
-        const $pages = $('<div id="depBox"></div>');
+        const $pages = $('#depBox');
 
         for(let i = 0; i < totalPages; i++) {
             $("<span id='depSpan' class='pageNumber'>"+(i + 1)+"</span>").appendTo($pages);
         }
-        $pages.appendTo("#departures");
         $(".pageNumber").hover(
         function () {
             $(this).addClass("focus");
@@ -41,12 +40,11 @@ window.onload = () => {
         const totalRows = $("#arrivals").find("tbody tr:has(td)").length;
         const perPage = 5;
         const totalPages = Math.ceil(totalRows/perPage);
-        const $pages = $('<div id="arrBox"></div>');
+        const $pages = $('#arrBox');
 
         for(let i = 0; i < totalPages; i++) {
             $("<span id='arrSpan' class='pageNumber'>"+(i + 1)+"</span>").appendTo($pages);
         }
-        $pages.appendTo("#arrivals");
         $(".pageNumber").hover(
         function () {
             $(this).addClass("focus");

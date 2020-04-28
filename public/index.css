@@ -1,5 +1,5 @@
 caption {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-family: monospace;
     text-align: center;
 }
@@ -8,7 +8,7 @@ table {
     font-size: 1.8rem;
     font-family: monospace;
     border-collapse: collapse;
-    margin: 2rem auto;
+    margin: auto;
 }
 
 th,
@@ -32,6 +32,18 @@ th {
     font-weight: bold;
 }
 
-.pageNumber {
-    margin: 2px;
+.space {
+    margin: 1.5rem;
+}
+
+#depBox,
+#arrBox {
+    font-family: monospace;
+    font-size: 1.7rem;
+    text-align: center;
+}
+
+#depSpan {
+    padding-left: 0.04rem;
+    padding-right: 0.04rem;
 }
