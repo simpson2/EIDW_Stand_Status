@@ -6,7 +6,7 @@ async function getDepartures() {
     const data = await getData();
     const clients = data.clients;
 
-    const table = document.getElementById("departures");
+    const table = document.getElementById("departures_entries");
 
     try {
         for (let i = 0; i < clients.length; i++) {
@@ -42,7 +42,7 @@ async function getArrivals() {
     const data = await getData();
     const clients = data.clients;
 
-    const table = document.getElementById("arrivals");
+    const table = document.getElementById("arrivals_entries");
 
     try {
         for (let i = 0; i < clients.length; i++) {
