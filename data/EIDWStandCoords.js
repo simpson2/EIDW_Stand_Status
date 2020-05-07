@@ -614,3 +614,7 @@ const EIDWStandCoords = {
         "lon": DMStoDD(006, 15, 37.71, "W")
     },
 }
+
+export {
+    EIDWStandCoords
+};

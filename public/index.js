@@ -3,14 +3,10 @@ import {
     getArrivals
 } from "../functions/flightInfo.js";
 import {
-    DublinDepartures,
-    DublinArrivals
-} from "../functions/EIDWFlights.js";
+    EIDWStandCoords
+} from "../data/EIDWStandCoords.js"
 
 window.onload = () => {
-
-    DublinDepartures();
-    DublinArrivals();
 
     getDepartures().then(() => {
         const totalRows = $("#departures").find("tbody tr:has(td)").length;
