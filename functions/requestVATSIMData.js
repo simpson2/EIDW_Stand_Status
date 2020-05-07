@@ -1,3 +1,5 @@
+//fetches the vatsim json feed from the specified URL and returns the json object of it.
+
 const vatsim = "http://eu.data.vatsim.net/vatsim-data.json";
 
 async function getData() {

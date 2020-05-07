@@ -2,18 +2,30 @@ import {
     getDepartures,
     getArrivals
 } from "../functions/flightInfo.js";
+import {
+    DublinDepartures,
+    DublinArrivals
+} from "../functions/EIDWFlights.js";
 
 window.onload = () => {
+
+    DublinDepartures();
+    DublinArrivals();
+
     getDepartures().then(() => {
         const totalRows = $("#departures").find("tbody tr:has(td)").length;
         const perPage = 5;
         const totalPages = Math.ceil(totalRows/perPage);
         const $pages = $('#depBox');
 
+        //pagination logic for the departures table
         for(let i = 0; i < totalPages; i++) {
-            $("<span id='depSpan' class='pageNumber'>"+(i + 1)+"</span>").appendTo($pages);
+            $("<span id='depSpan' class='depPageNumber'>"+(i + 1)+"</span>").appendTo($pages);
         }
-        $(".pageNumber").hover(
+        document.getElementsByClassName("depPageNumber")[0].className += " depActive";
+
+        $(".depPageNumber").hover(
+
         function () {
             $(this).addClass("focus");
         },
@@ -26,8 +38,13 @@ window.onload = () => {
         for(let i = 0; i <= perPage - 1; i++) {
             $(depRows[i]).show();
         }
-
         $(document).on("click", "#depSpan", function(event) {
+
+
+            let currentActive = document.getElementsByClassName("depActive");
+            currentActive[0].className = currentActive[0].className.replace("depActive", "");
+            this.className += " depActive";
+
             $("#departures").find("tbody tr:has(td)").hide();
             let nBegin = ($(this).text() - 1) * perPage;
             let nEnd = $(this).text() * perPage - 1;
@@ -42,10 +59,14 @@ window.onload = () => {
         const totalPages = Math.ceil(totalRows/perPage);
         const $pages = $('#arrBox');
 
+        //pagination logic for the arrivals table
         for(let i = 0; i < totalPages; i++) {
-            $("<span id='arrSpan' class='pageNumber'>"+(i + 1)+"</span>").appendTo($pages);
+            $("<span id='arrSpan' class='arrPageNumber'>"+(i + 1)+"</span>").appendTo($pages);
         }
-        $(".pageNumber").hover(
+        document.getElementsByClassName("arrPageNumber")[0].className += " arrActive";
+
+        $(".arrPageNumber").hover(
+
         function () {
             $(this).addClass("focus");
         },
@@ -60,6 +81,11 @@ window.onload = () => {
         }
 
         $(document).on("click", "#arrSpan", function(event) {
+
+            let currentActive = document.getElementsByClassName("arrActive");
+            currentActive[0].className = currentActive[0].className.replace("arrActive", "");
+            this.className += " arrActive";
+
             $("#arrivals").find("tbody tr:has(td)").hide();
             let nBegin = ($(this).text() - 1) * perPage;
             let nEnd = $(this).text() * perPage - 1;
