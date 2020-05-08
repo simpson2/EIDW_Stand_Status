@@ -18,9 +18,9 @@ async function DublinDepartures() {
 
             output[c] = {
                 "callsign" : client.callsign,
-                "destination" : client.planned_destairport,
-                "latitude" : client.latitude,
-                "longitude" : client.longitude
+                "dest" : client.planned_destairport,
+                "lat" : client.latitude,
+                "lon" : client.longitude
             };
         }
     }
@@ -42,9 +42,9 @@ async function DublinArrivals() {
 
             output[c] = {
                 "callsign" : client.callsign,
-                "departure" : client.planned_depairport,
-                "latitude" : client.latitude,
-                "longitude" : client.longitude
+                "dep" : client.planned_depairport,
+                "lat" : client.latitude,
+                "lon" : client.longitude
             };
         }
     }

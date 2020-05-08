@@ -3,10 +3,12 @@ import {
     getArrivals
 } from "../functions/flightInfo.js";
 import {
-    EIDWStandCoords
-} from "../data/EIDWStandCoords.js"
+    isInEIDW
+} from "../functions/EIDWGeofence.js"
 
 window.onload = () => {
+
+    isInEIDW();
 
     getDepartures().then(() => {
         const totalRows = $("#departures").find("tbody tr:has(td)").length;

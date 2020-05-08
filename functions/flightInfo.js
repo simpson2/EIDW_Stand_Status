@@ -24,7 +24,7 @@ async function getDepartures() {
             let destCell = document.createElement("td");
 
             let callsign = dep.callsign;
-            let dest = dep.destination;
+            let dest = dep.dest;
 
             callsignCell.innerHTML = callsign;
             destCell.innerHTML = dest;
@@ -58,7 +58,7 @@ async function getArrivals() {
             let depCell = document.createElement("td");
 
             let callsign = arr.callsign;
-            let dep = arr.departure;
+            let dep = arr.dep;
 
             callsignCell.innerHTML = callsign;
             depCell.innerHTML = dep;
