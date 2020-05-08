@@ -15,6 +15,7 @@ async function isInEIDW() {
         "eastLon": -6.229167, //inside = < 0
         "westLon": -6.295833 //inside = > 0
     }
+    let output = [];
 
     for (let i = 0; i < clients.length; i++) {
         let client = clients[i];

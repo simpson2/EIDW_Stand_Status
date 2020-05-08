@@ -1,3 +1,6 @@
+//an arguably unnecessary file/function
+//but it does make things neater overall in flightInfo.js
+
 import {
     getData
 } from "./requestVATSIMData.js"
@@ -43,8 +46,6 @@ async function DublinArrivals() {
             output[c] = {
                 "callsign" : client.callsign,
                 "dep" : client.planned_depairport,
-                "lat" : client.latitude,
-                "lon" : client.longitude
             };
         }
     }
