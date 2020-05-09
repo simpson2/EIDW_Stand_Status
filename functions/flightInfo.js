@@ -19,8 +19,10 @@ function getDepartures(data) {
     try {
         for (let i = 0; i < clients.length; i++) {
             let client = clients[i];
+            let depAirport = client.planned_depairport;
+            let destAirport = client.planned_destairport;
 
-            if (client.planned_depairport == "EIDW") {
+            if (depAirport == "EIDW") {
                 c += 1;
 
                 let row = document.createElement("tr");
@@ -41,11 +43,14 @@ function getDepartures(data) {
         }
         for(let i = 0; i < groundClients.length; i++) {
             let groundClient = groundClients[i];
+            let depAirport = groundClient.planned_depairport;
+            let destAirport = groundClient.planned_destairport;
 
-            if(groundClient.planned_depairport == "EIDW") {
+            if((depAirport == "EIDW"  & destAirport != "EIDW") | depAirport == null) {
+                console.log("DEPARTURES ON GND " + groundClient.callsign)
                 g+=1;
             }
-            if(groundClient.planned_depairport == null) {
+            if(depAirport == null) {
 
                 c += 1;
 
@@ -111,6 +116,7 @@ function getArrivals(data) {
             let groundClient = groundClients[i];
 
             if(groundClient.planned_destairport == "EIDW") {
+                console.log("ARRIVALS ON GND " + groundClient.callsign)
                 g+=1;
             }
         }
