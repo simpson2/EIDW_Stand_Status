@@ -2,7 +2,7 @@ import {
     EIDWStandCoords
 } from "../data/EIDWStandCoords.js";
 
-async function isInEIDW(data) {
+function isInEIDW(data) {
 
     const clients = data.clients;
     const geofence = {
@@ -18,14 +18,15 @@ async function isInEIDW(data) {
         let flightLat = client.latitude;
         let flightLon = client.longitude;
 
-        if (client.clienttype === "PILOT" &&
+        if (client.clienttype == "PILOT" &&
             flightLat - geofence.northLat <= 0 &&
             flightLat - geofence.southLat >= 0 &&
             flightLon - geofence.eastLon <= 0 &&
             flightLon - geofence.westLon >= 0) {
-            console.log(client.callsign);
+            output.push(client);
         }
     }
+    return output;
 }
 
 export {
