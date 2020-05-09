@@ -1,13 +1,9 @@
 import {
     EIDWStandCoords
 } from "../data/EIDWStandCoords.js";
-import {
-    getData
-} from "./requestVATSIMData.js"
 
-async function isInEIDW() {
+async function isInEIDW(data) {
 
-    const data = await getData()
     const clients = data.clients;
     const geofence = {
         "northLat": 53.438890, //inside = < 0

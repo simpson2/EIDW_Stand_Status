@@ -1,73 +1,79 @@
 //populates the departure and arrival table by parsing the
 //json object from requestVATSIMData
 
-import {
-    DublinDepartures,
-    DublinArrivals,
-} from "../functions/EIDWFlights.js";
 
-async function getDepartures() {
+async function getDepartures(data) {
 
-    const deps = await DublinDepartures();
-    const c = deps.length;
+    const clients = data.clients;
 
     const table = document.getElementById("departures_entries");
     const depCaption = document.getElementById("depCaption");
 
+    let c = 0;
+
     try {
-        for (let i = 0; i < c; i++) {
-            let dep = deps[i];
+        for (let i = 0; i < clients.length; i++) {
+            let client = clients[i];
 
-            let row = document.createElement("tr");
-            let callsignCell = document.createElement("td");
-            // callsignCell.style.textAlign = "left";
-            let destCell = document.createElement("td");
+            if (client.planned_depairport == "EIDW") {
+                c += 1;
 
-            let callsign = dep.callsign;
-            let dest = dep.dest;
+                let row = document.createElement("tr");
+                let callsignCell = document.createElement("td");
+                // callsignCell.style.textAlign = "left";
+                let destCell = document.createElement("td");
 
-            callsignCell.innerHTML = callsign;
-            destCell.innerHTML = dest;
+                let callsign = client.callsign;
+                let dest = client.planned_destairport;
 
-            depCaption.innerHTML = c + " Departures";
+                callsignCell.innerHTML = callsign;
+                destCell.innerHTML = dest;
 
-            row.appendChild(callsignCell);
-            row.appendChild(destCell);
-            table.appendChild(row);
+                depCaption.innerHTML = c + " Departures";
+
+                row.appendChild(callsignCell);
+                row.appendChild(destCell);
+                table.appendChild(row);
+            }
         }
     } catch (err) {
         console.log("ERR: " + err);
     }
 }
 
-async function getArrivals() {
+async function getArrivals(data) {
 
-    const arrs = await DublinArrivals();
-    const c = arrs.length;
+    const clients = data.clients;
 
     const table = document.getElementById("arrivals_entries");
     const arrCaption = document.getElementById("arrCaption");
 
+    let c = 0;
+
     try {
-        for (let i = 0; i < c; i++) {
-            let arr = arrs[i];
+        for (let i = 0; i < clients.length; i++) {
+            let client = clients[i];
 
-            let row = document.createElement("tr");
-            let callsignCell = document.createElement("td");
-            // callsignCell.style.textAlign = "left";
-            let depCell = document.createElement("td");
+            if (client.planned_destairport == "EIDW") {
+                c+=1;
 
-            let callsign = arr.callsign;
-            let dep = arr.dep;
+                let row = document.createElement("tr");
+                let callsignCell = document.createElement("td");
+                // callsignCell.style.textAlign = "left";
+                let depCell = document.createElement("td");
 
-            callsignCell.innerHTML = callsign;
-            depCell.innerHTML = dep;
+                let callsign = client.callsign;
+                let dep = client.planned_depairport;
 
-            arrCaption.innerHTML = c + " Arrivals";
+                callsignCell.innerHTML = callsign;
+                depCell.innerHTML = dep;
 
-            row.appendChild(callsignCell);
-            row.appendChild(depCell);
-            table.appendChild(row);
+                arrCaption.innerHTML = c + " Arrivals";
+
+                row.appendChild(callsignCell);
+                row.appendChild(depCell);
+                table.appendChild(row);
+            }
         }
     } catch (err) {
         console.log("ERR: " + err);
